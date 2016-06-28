@@ -1,0 +1,42 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../js-yaml-import/js-yaml-import.html">
+
+<dom-module id="yaml-parser">
+
+  <template>
+  </template>
+
+  <script>
+    Polymer({
+      is: 'yaml-parser',
+
+      properties: {
+        yaml: {
+          type: String,
+          observer: '_yamlChanged'
+        },
+        json: {
+          type: String,
+          notify: true,
+          reflectToAttribute: true
+        },
+        validYaml: {
+          type: String,
+          value: 'true',
+          notify: true,
+          reflectToAttribute: true
+        }
+      },
+
+      _yamlChanged: function(yaml) {
+        try {
+          this.json = jsyaml.safeLoad(yaml);
+          this.validYaml = 'true';
+        } catch (e) {
+          this.validYaml = 'false';
+        }
+      }
+    });
+  </script>
+
+</dom-module>
