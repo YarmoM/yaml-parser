@@ -1,0 +1,28 @@
+{
+  "name": "js-yaml-import",
+  "description": "JS-YAML importer for Polymer",
+  "version": "0.1.0",
+  "main": "js-yaml-import.html",
+  "dependencies": {
+    "js-yaml": "^3.6.1"
+  },
+  "authors": [
+    "Yarmo Mackenbach <yarmo@medea.one>"
+  ],
+  "keywords": [
+    "javascript",
+    "yaml",
+    "polymer",
+    "import",
+    "html"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/YarmoM/js-yaml-import",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

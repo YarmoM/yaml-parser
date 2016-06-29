@@ -1,0 +1,28 @@
+{
+  "name": "yaml-parser-demo",
+  "description": "YAML parser Demo",
+  "main": "yaml-parser.html",
+  "version": "1.0.0",
+  "homepage": "https://yarmom.github.com/yaml-parser",
+  "authors": [
+    "Yarmo Mackenbach <yarmo@medea.one>"
+  ],
+  "keywords": [
+    "yaml",
+    "parser",
+    "polymer"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.4.0",
+    "js-yaml-import": "^0.1.0",
+    "yaml-parser": "^1.0.0"
+  }
+}

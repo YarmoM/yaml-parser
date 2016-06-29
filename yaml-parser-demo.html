@@ -1,0 +1,71 @@
+<link rel="import" href="/bower_components/polymer/polymer.html">
+<link rel="import" href="/bower_components/yaml-parser/yaml-parser.html">
+
+
+<dom-module id="yaml-parser-demo">
+  <template>
+    <style>
+      :host {
+        font-family: sans-serif;
+        display: block;
+        width: 920px;
+        margin: 0 auto;
+      };
+      :host h1 {
+        font-weight: 400;
+      }
+      :host h3 {
+        font-weight: 400;
+      }
+      :host .section {
+        display: inline-block;
+        width: 45%;
+      }
+      :host textarea {
+        width: 100%;
+        height: 300px;
+        resize: none;
+      }
+      :host textarea[valid-yaml="false"] {
+        background-color: rgba(255,0,0,0.2);
+      };
+    </style>
+
+    <h1>The ultimate yaml-parser demo</h1>
+
+    <div class="section">
+      <h3>YAML</h3>
+      <textarea name="yamlInput" rows="8" cols="40" value="{{yamlDemo::input}}" valid-yaml$="[[validyaml]]"></textarea>
+    </div>
+    <div class="section">
+      <h3>JSON (readonly)</h3>
+      <textarea name="jsonOutput" rows="8" cols="40" value="[[jsonDemoString]]" readonly="true"></textarea>
+    </div>
+
+    <yaml-parser yaml$="[[yamlDemo]]" valid-yaml={{validyaml}} json="{{jsonDemo}}"></yaml-parser>
+  </template>
+
+  <script>
+    Polymer({
+      is: "yaml-parser-demo",
+
+      properties: {
+        yamlDemo: {
+          type: String,
+          value: "test:\n - code: nice\n - function: awesome"
+        },
+        jsonDemo: {
+          type: String,
+          observer: '_jsonDemoChanged'
+        },
+        jsonDemoString: {
+          type: String
+        }
+      },
+
+      _jsonDemoChanged: function(json) {
+        this.jsonDemoString = JSON.stringify(json, null, '  ');
+      }
+    });
+  </script>
+</dom-module>

@@ -1,0 +1,38 @@
+{
+  "name": "yaml-parser",
+  "description": "YAML parser for Polymer",
+  "main": "yaml-parser.html",
+  "version": "1.0.0",
+  "homepage": "https://github.com/YarmoM/yaml-parser",
+  "authors": [
+    "Yarmo Mackenbach <yarmo@medea.one>"
+  ],
+  "keywords": [
+    "yaml",
+    "parser",
+    "polymer",
+    "web-components"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.4.0",
+    "js-yaml-import": "^0.1.0"
+  },
+  "_release": "1.0.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "1.0.0",
+    "commit": "76ea02eab6d7e2755a6c5b64c251faba3b939728"
+  },
+  "_source": "https://github.com/YarmoM/yaml-parser.git",
+  "_target": "^1.0.0",
+  "_originalSource": "yaml-parser",
+  "_direct": true
+}
