@@ -2,7 +2,7 @@
 
 By Yarmo Mackenbach
 
-(DEMO)[https://yarmom.github.io/yaml-parser/]
+[DEMO](https://yarmom.github.io/yaml-parser/)
 
 ## Usage
 
